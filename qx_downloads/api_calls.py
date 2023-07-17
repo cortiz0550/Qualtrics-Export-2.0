@@ -65,6 +65,34 @@ class SurveyDownload:
 
 
     def export_survey_response(self):
-        progress = self.create_response()
-        file = self.get_response_progress(progress)
-        self.get_response(file)
+        try:
+            progress = self.create_response()
+            file = self.get_response_progress(progress)
+            self.get_response(file)
+            return "Successful download."
+        except as e:
+            return e
+
+
+    def get_response_pdf(self, response_id):
+        # Get a file we can pull response IDs from
+
+        
+
+# def exportSurvey(apiToken, surveyId, dataCenter, fileFormat):
+#     surveyId = surveyId
+#     fileFormat = fileFormat
+#     dataCenter = dataCenter 
+
+#     # Setting static parameters
+#     request_check_progress = 0.0
+#     progress_status = "inProgress"
+#     baseUrl = "https://{0}.qualtrics.com/API/v3/surveys/{1}/export-responses/".format(dataCenter, surveyId)
+    
+    
+
+#     # Step 3: Downloading file
+
+
+    
+#     # Step 4: Unzipping the file
